@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_TestandoVariaveisContainer</title>
+</head>
+<body>
+    <h1> Identificação</h1>
+    <input type="button" class="botao" value="Login" onclick="login()">
+    <hr>
+    <div id="resultado">
+        Olá.
+    </div>
+<script>
+function login(){
+var nome = prompt("Identificação","Informe o Login");
+if(nome == ""){
+    alert("Informe algo, não deixe em branco");
+}else if(nome.length <= 3){
+    alert("Informe algo que contenha quatro caracteres ");
+}else{
+    resultado.white ( "<h2> Bem vindo "+nome+" <br/> Foi Aceito!</h2>");
+}
+
+
+}
+
+</script>
+
+</body>
+</html>

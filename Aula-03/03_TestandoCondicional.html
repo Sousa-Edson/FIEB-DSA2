@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03 Tetando Condicional</title>
+</head>
+<body>
+<h1>Autenticação</h1>
+<input type="button" class="botao" value="Login" onclick="login()">
+    <script>
+    function login(){
+        var nome = prompt("Autenticação")
+        if(nome==""||nome.length <= 0){
+            alert("Informe algo, não deixe em branco")
+        }else{
+            alert("Bem vindo "+nome);
+            document.write("<h2>Login: "+nome+" <br>Foi Aceito!!! <h2>");
+        }
+    }
+    </script>
+
+</body>
+</html>

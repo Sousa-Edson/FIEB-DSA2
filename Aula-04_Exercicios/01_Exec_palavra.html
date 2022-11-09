@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palavra x 10</title>
+</head>
+
+<body>
+    <h1>Testando laço</h1>
+    <input type="text" placeholder="Palavra ou frase" name="palavra" id="palavra">
+    <input type="button" value="Gerar Laço" onclick="repetePalavra()">
+
+    <div id="rP">
+
+    </div>
+    <script>
+        function repetePalavra() {
+            var vP = document.getElementById("palavra").value;
+            var aux = "";
+            var i = 1;
+            if (vP.length == 0) {
+                alert("não deixe em branco!");
+                document.getElementById("rP").innerHTML = "";
+                document.getElementById("palavra").focus();
+            } else {
+                while (i <= 10) {
+                    aux += i + " - " + vP + "</br>";
+                    i++;
+                }
+                document.getElementById("rP").innerHTML = "<h1>Frase ou palavra impressa 10 vezes</h1>" + aux;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

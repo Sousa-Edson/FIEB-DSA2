@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.legend{
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.caixaCabecalho{
+font-family: 'macondo',cursive;
+background-color: aqua;
+padding: 5px;
+text-align: center;
+font-size: 1.5em;
+width: 400px;
+margin: 0 auto;
+color: red;
+}
+.caixaMain{
+    background-color: aqua;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+    font-size: 26px;
+    padding: 10px;
+}
+.inputBase{
+    color: red;
+    width: 90%;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.estado{
+    color: red;
+    width: 10%;
+    font-size: 18px;
+}
+.estadoLabel{
+    color: rgb(128, 128, 128);
+    width: 10%;
+    font-size: 20px;
+    margin: 0 0 0 20px;
+}
+.inputNumber{
+    color:red;
+    width: 35%;
+    font-size: 20px;
+    margin: 0 20px;
+}
+.input_data{
+    color:blue;
+    width: 25%;
+    font-size: 20px;
+    margin: 0 20px;
+}
+.color{
+    width: 20%;
+    margin: 0 20px;
+}
+.inputCkb{
+    font-size: 70px;
+    margin: 0 20px;
+}
+.btn_radio{
+    margin: 0 20px;
+}
+.msg{
+    color: red;
+    font-size: 25px;
+    margin: 0 0 20px 20px;
+}
+.botoe{
+    font-size: 25px;
+    margin: 0 20px;
+}

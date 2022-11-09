@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar números sorteados</title>
+    <style>
+      .btn_sortear {
+        background-color: royalblue;
+        color: white;
+        width: 180px;
+      }
+      .dNumero {
+        background-color: yellow;
+      }
+
+      input {
+        width: 172px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Buscar números sorteados, desenvolva uma página que solicite um número entre 0 a 10 e ao clicar em 
+Ok, realize um sorteio (use o método random()) de 10 números e verifique se é igual ao número digitado, 
+seguem as regras do negócio:
+• Não permita campo em branco somente números. Informe “Não deixe em branco!!!”;
+• Não permita letras. Informe “Digite somente números”;
+• Fixar para 2 casas a entrada dos números;
+• Aceite números entre 0 a 10. Caso fora da faixa, informe: “Digite um número entre 0 a 10”
+• Apresentar na página a saída -->
+    <main>
+      <div>
+        <h1 class="titulo">Buscar números sorteados</h1>
+        <div id="mensagem" style="color: red;"></div>
+        <div class="">
+          <input
+            type="text"
+            name="dNumero"
+            id="dNumero"
+            placeholder="Digite um número"
+          />
+        </div>
+        <div class="">
+          <input
+            type="button"
+            value="Sortear"
+            class="btn_sortear"
+            onclick="chamaSorteio()"
+          />
+        </div>
+      </div>
+      <div id="numeroDigitado" class="numeroDigitado"></div>
+      <div id="numeroSorteado" class="numeroSorteado"></div>
+      <div id="resultado" class="resultado"></div>
+    </main>
+    <script>
+      function chamaSorteio() {
+        // cham numero aleatorio
+        var valores = new Array(); // cria o array
+        var max = 10,
+          min = 1; // valores minimo e maximo a ser gerados
+        var aux = ""; //temporario
+        var sorteados = "";
+
+        //  pega numero digitado
+        var vNumero = document.getElementById("dNumero").value;
+        //  campo mensagem
+        var msg = document.getElementById("mensagem");
+
+        // obtem o seletor do campo
+        const numeroDigitado = document.querySelector(".numeroDigitado");
+        numeroSorteado = document.querySelector(".numeroSorteado");
+        const resultado = document.querySelector(".resultado");
+        //limpa campos
+        msg.innerHTML = "";
+        numeroSorteado.innerHTML = "";
+        resultado.innerHTML = "";
+        numeroDigitado.innerHTML = "";
+        // verifica se esta vazia
+        if (vNumero.length === 0) {
+          console.log("zero");
+          msg.innerHTML = "Não deixe em branco!!!";
+        } else if (vNumero.length >= 2) {
+          msg.innerHTML = "Digite um número entre 0 e 10";
+        } else {
+          // verifica se é igual a numero
+          if (Number.isInteger(+vNumero)) {
+            resultado.innerHTML = "Você não acertou o número";
+            if (vNumero >= 0 && vNumero <= 10) {
+              numeroDigitado.innerHTML = "Número digitado foi " + vNumero;
+              // aqui chama o laço de repetição para pegar os números aletórios
+
+              for (cont = 0; cont < 10; cont++) {
+                valores[cont] = Math.floor(
+                  Math.random() * (max + 1 - min) + min
+                ); // incluir o numero maximo
+              }
+              resultado.innerHTML = "Você não acertou o número";
+              for (cont = 0; cont < valores.length; cont++) {
+                // aqui verifica o resultado se acertou ou não
+
+                if (vNumero == valores[cont]) {
+                  resultado.innerHTML = "Você acertou o número";
+                  teste = false;
+                }
+
+                console.log("ola " + valores[cont]);
+                sorteados = sorteados + " " + valores[cont];
+                numeroSorteado.innerHTML =
+                  "<p>Números sorteados:<\p><p>" + sorteados + "<\p>";
+              }
+            } else {
+              msg.innerHTML = "Digite um número entre 0 e 10";
+            }
+          } else {
+            msg.innerHTML = "Digite somente números";
+            // numeroDigitado.innerHTML = "erro " + vNumero;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

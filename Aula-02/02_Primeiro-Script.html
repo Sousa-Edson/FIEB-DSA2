@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiro Script</title>
+</head>
+<body onload="iniciar()">
+    <h1>Informações no Body</h1>
+    <script>
+    document.write("<h1>Obtendo informação do Título: "+document.title+"</h1>");
+    document.write("<br/><h1>Inserindo informações através do Script</h1>");
+
+    // Informações por função
+    function iniciar(){
+        document.write("<h1>  "+document.title+" por function</h1>");
+        document.write("<br/><h1>Inserindo informações através de function</h1>");
+    }
+    </script>
+</body>
+</html>

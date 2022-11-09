@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+.titulo {
+  color: blue;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.montadoras {
+  color: gray;
+  font-size: 3em;
+  display: contents;
+}
+
+.montadoras:hover {
+  color: red;
+  font-size: 3.3em;
+  transition: 0.5s;
+}

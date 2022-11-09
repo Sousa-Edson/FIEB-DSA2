@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 50px;
+}
+
+#btn_incluir {
+    background-color: blue;
+    color: white;
+    width: 100px;
+    margin-top: 2px;
+}
+
+.msg_vermelha {
+    color: red;
+}
+ul{
+    list-style: none;
+}

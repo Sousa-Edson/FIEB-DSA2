@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testando formulário aula</title>
+    <link rel="stylesheet" href="styleAulaForm.css">
+</head>
+
+<body>
+    <header>
+        <div class="caixaCabecalho">
+            <h1>Entrada de dados</h1>
+        </div>
+    </header>
+    <br><br>
+    <main>
+        <section class="caixaMain">
+            <br>
+            <h2>Elemento Input</h2>
+            <br>
+            <fieldset>
+                <legend class="legend">Dados do Input</legend>
+
+                <form action="" method="POST" id="acao">
+
+                    <div class="entrada">
+                        <input type="text" id="nome" class="inputBase" placeholder="Informe o nome" required>
+                    </div>
+                    <div>
+                        <input type="hidden" id="ip" class="inputBase" placeholder="NÃO MOSTRA NADA" required>
+                    </div>
+                    <div>
+                        <input type="tel" id="tel" class="inputBase" maxlength="15" required
+                            pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">
+                    </div>
+                    <div>
+                        <input type="url" id="url" class="inputBase" placeholder="Forneça uma URL" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" class="inputBase" placeholder="Informe o E-mail" required>
+                    </div>
+                    <div>
+                        <input type="password" id="password" class="inputBase" placeholder="Informe a senha" required>
+                    </div>
+                    <label for="estado" class="estadoLabel">Estado</label>
+                    <select name="estado" id="estado" class="estado">
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="PB">PB</option>
+                    </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend class="legend">Outros Tipos</legend>
+                <div>
+                    <input type="date" id="date" class="input_data" placeholder="Informe a data" required>
+                    <label for="hora-desejada">Hora desejada:</label>
+                    <input type="time" class="input_data" id="hora-desejada" name="hora-desejada" required>
+                </div>
+                <div>
+                    <input type="number" id="number" class="inputBase" placeholder="Números de filhos" max="5" min="0"
+                        required>
+                </div>
+                <div>
+                    <input type="range" id="range" class="inputBase" min="0" max="200" required>
+                </div>
+                <div>
+                    <input type="color" id="color" class="inputBase" placeholder="Informe uma cor" required
+                        class="color">
+                        <label for="color">Selecione uma cor</label>
+                    <br><br>
+                </div>
+                <div>
+                    <input type="checkbox" id="checkbox" name="valor" value="selecao" class="inputCkb" required>
+               <label for="checkbox">Seleção de valor R$10,00</label><br>
+               <input type="checkbox" id="checkbox1" name="valor" value="selecao" class="inputCkb" required>
+               <label for="checkbox1">Seleção de valor R$100,00</label><br><br>
+                </div>
+                <div class="btn_radio">
+                    <input type="radio" id="html" name="selecao" value="html">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name="selecao" value="css">
+                    <label for="html">CSS</label><br><br>
+                </div>
+                <div class="msg">
+                    <label for="msg">Mensagem</label>
+                    <textarea name="msg" id="msg" cols="65" rows="4" maxlength="255"></textarea>
+                </div>
+                <div>
+                    <input type="file" id="file" class="inputBase" required>
+                </div>
+                <br>
+            </fieldset>
+            <div>
+                <br>
+                <button type="submit" id="btn-submit" class="botoes">Enviar</button>
+                <button type="button" class=" botoes">OK</button>
+                <br><br>
+                <button type="reset" class="botoes">Limpar</button>
+            </div>
+            </form>
+        </section>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>

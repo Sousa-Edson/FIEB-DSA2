@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Piscina</title>
+</head>
+<body>
+    <script>
+    
+    var largura = prompt("Digite a largura: ");
+    var comprimento = prompt("Digite o comprimento: ");
+    var profundidade = prompt("Digite o profundidade: ");
+    var metrosCubicos = largura * comprimento*profundidade;
+    metrosCubicos=metrosCubicos.toLocaleString();
+    var total=metrosCubicos*45;
+     total = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    document.write("<h1>A piscina solicitada terá "+metrosCubicos+" metros cubicos </h1> " );
+    document.write("<h1>O valor da cnstrução sera: "+total+"  </h1> " );   
+    </script>
+</body>
+</html>

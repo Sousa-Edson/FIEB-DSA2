@@ -1,0 +1,17 @@
+ div{
+    padding-top: 10px;
+ }
+span {
+	text-transform: capitalize;
+    color: red;  
+    width:  400px; 
+    display:inline-table;
+   
+}
+ 
+ li{ 
+     
+    list-style:none;
+    
+   
+ }

@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    color: blue;
+}
+.titulo{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.aleatorio{
+    font-size: 2em;
+}

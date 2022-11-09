@@ -1,0 +1,11 @@
+
+.imagem-carrossel
+{
+    object-fit: cover;     /* cobrir toda imagem com cover*/
+    object-position: 0 50%; /* mover na posição x(da esquerda pra direita) e y( de cima pra baixo)*/
+    height: 400px;
+}
+
+.fonts-bolos{
+    font-family: 'Dancing Script', cursive;
+}

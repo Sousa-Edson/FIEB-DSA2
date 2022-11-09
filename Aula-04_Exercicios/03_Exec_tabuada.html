@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Tabuada</h1>
+    <p id="incorreto" style="color: red;"> </p>
+    <div>
+        <input type="text" placeholder="Digite a tabuada" name="numero" id="numero" maxlength="2" style="width :200px;">
+    </div>
+    <div style="padding-top: 10px; ">
+        <input type="button" value="Incluir " onclick="chamaTabuada()"
+            style="width :210px;height: 50px;font-size: 15px;color: white; background-color: blue;">
+    </div>
+
+
+    <div id="rP" style="text-align: center;">
+
+    </div>
+    <script>
+        function chamaTabuada() {
+            var vC = document.getElementById("numero").value;
+            var vResp = "";
+            var i = 1;
+
+            if (vC.length == 0 || !!+vC == false || vC < 2 || vC > 10) {
+
+                document.getElementById("rP").innerHTML = "";
+                document.getElementById("incorreto").innerHTML = "Digite um valor entre: 2 a 10";
+                // alert("Informe um valor válido!");
+            } else {
+
+                do {
+                    vResp += vC + " x " + i + " = " + (i * vC) + "<br>";
+                    i++;
+                    document.getElementById("rP").innerHTML = "<h1 style=\"background-color: blue;\">Tabuada do " + vC + "</h1>" + vResp;
+                    document.getElementById("incorreto").innerHTML = "";
+                } while (i <= 10);
+
+            }
+            document.getElementById("numero").focus();
+            console.log(!!+vC); // não é numero
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idade</title>
+  </head>
+  <body>
+    <h1>Veja aqui se você é maior de idade !</h1>
+    <div>
+      <input
+        type="text"
+        id="idade"
+        class="idade"
+        placeholder="Digitr sua idade "
+      />
+      <input
+        type="button"
+        class="botao"
+        value="Clique aqui"
+        onclick="chamaIdade()"
+      />
+    </div>
+    <h3 id="resultado"></h3>
+    <script>
+      function chamaIdade() {
+        var resultado = "Digite um  número";
+        var suaIdade = document.getElementById("idade").value;
+        if (suaIdade > 18) {
+          resultado = "Parabéns você é de maior!!";
+        }else if(suaIdade < 18){
+          resultado = "Você ainda é de menor!!";
+        }
+
+        document.getElementById("resultado").innerHTML = resultado;
+      }
+    </script>
+  </body>
+</html>

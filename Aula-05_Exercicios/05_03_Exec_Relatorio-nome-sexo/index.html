@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório nome e sexo</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body onload="contagem()">
+    <h1>Relatório - Nome e Sexo</h1>
+    <h3><span class="msg" id="msg"></span></h3>
+    <label for="nome">Nome</label>
+    <div>
+        <input type="text" name="nome" id="nome" placeholder="informe um nome" value="edson de souza">
+    </div>
+    
+    <div>
+        Sexo
+        <div>
+            <input type="radio" name="sexo" id="masculino" value="Masculino" checked>
+            <label for="masculino">Masculino</label>
+        </div>
+        <div>
+            <input type="radio" name="sexo" id="feminino" value="Feminino">
+            <label for="feminino">Feminino</label>
+        </div>
+    </div>
+    <div>
+        <input type="button" value="Incluir" id="Incluir" onclick="incluir()">
+        <input type="button" value="Relatorio" id="Relatorio" onclick="relatorio()">
+    </div>
+    <div class="lista" id="lista">
+
+    </div>
+
+    <script src="app.js">
+    </script>
+    <script>
+
+        function myFunction() {
+            console.log("function called...");
+        }
+
+    </script>
+</body>
+
+</html>

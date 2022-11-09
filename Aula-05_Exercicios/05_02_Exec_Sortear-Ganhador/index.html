@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortear nome do ganhador</title>
+    <link rel="stylesheet" href="main.css">
+     
+</head>
+
+<body>
+    <main>
+        <p>Inclusão de nomes:</p>
+        <h1>Sortear ganhador</h1>
+        <div class="msg_vermelha" id="msg_vermelha" ></div>
+        <input type="text" name="txt_nome" id="txt_nome" placeholder="Informe o nome" maxlength="15" />
+        <div>
+            <input type="button" name="btn_incluir" id="btn_incluir" value="Incluir" onclick="adicionarNome()" />
+        </div>
+        <div >
+            <h3>Nomes digitados:</h3>
+            <ul id="lista">
+               
+            </ul>
+
+            <h3 id="ganhador"></h3>
+        </div>
+    </main>
+    <script src="app.js">
+    </script>
+  
+</body>
+
+</html>
+
+<!-- 2.SortearGanhador, desenvolva uma página que solicite a digitação de 5 nomes,sendo que os mesmos deverão 
+    ser apresentados abaixo, seguem as regras do negócio:
+    •Não permita campo em branco, informe “Não deixe em branco!!!”;
+    •Após a inclusão limpar o campo de nome e deixar o foco no mesmo;•Fixar para 15 caracteres a quantidade de dígitos para o nome;
+    •Após o últimonome, sorteie um ganhador (use o método random()), a qual deverá ser apresentado;
+    •Após o último nome, desativar o botão de inclusãoe alterar a cor para cinza;
+    •Dicas:oPara desativar o botão utilize:  botao.disabled=true.oPara alterar a cor do botão utilize: botao.style.backgroundColor ="gray". -->

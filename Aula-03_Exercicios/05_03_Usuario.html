@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <p id="msg"></p>
+    <input type="text" placeholder="Digite seu login" id="login">
+    <input type="text" placeholder="Digite sua senha" id="senha">
+    <input type="button" value="Logar" onclick="logar()">
+
+    <script>
+        function logar() {
+            var sLogin = "edson";
+            var sSenha = "123";
+            var vLogin = document.getElementById("login").value;
+            var vSenha = document.getElementById("senha").value;
+            if (sLogin == vLogin && sSenha == vSenha) {
+                resultado = "Login correto!";
+            } else {
+                if (vLogin.length < 1 || vSenha.length < 1) {
+                    resultado = "Login ou senha estão vazio!";
+                    document.getElementById("login").focus();
+                } else {
+                    resultado = "Login incorreto!";
+                }
+            }
+            document.getElementById("msg").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dias da semana</title>
+</head>
+
+<body>
+    <h1>Dias da semana</h1>
+    <div>
+        <input type="text" id="numeroSemana" class="numeroSemana" placeholder="Informe um número!!! ">
+        <input type="button" class="botao" value="Testando valor" onclick="diaSemana()">
+    </div>
+    <script>
+        function diaSemana() {
+            var msg = "";
+            var valor = document.getElementById("numeroSemana").value;
+            var valor2 = parseInt(valor)
+
+            switch (valor2) {
+                case 1:
+                    msg = "Domingo";
+                    break;
+                case 2:
+                    msg = "Segunda-feira";
+                    break;
+
+                case 3:
+                    msg = "Terça-feira";
+                    break;
+
+                case 4:
+                    msg = "Quarta-feira";
+                    break;
+
+                case 5:
+                    msg = "Quinta-feira";
+                    break;
+
+                case 6:
+                    msg = "Sexta-feira";
+                    break;
+                case 7:
+                    msg = "Sabado";
+                    break;
+
+                default:
+                    msg = " Este dia não existe";
+                    
+                    break;
+            }
+            if (valor.length < 1) {
+                alert("Informe um valor, não deixe em branco!");
+                document.getElementById("numeroSemana").focus();
+            } else {
+                document.write("<h2>Número por extenso:<br>" + msg + "</h2>");
+            }
+
+        }
+    </script>
+</body>
+
+</html>
